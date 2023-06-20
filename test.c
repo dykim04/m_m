@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: dong-kim <dong-kim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 02:50:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/06/20 03:46:20 by marvin           ###   ########seoul.kr  */
+/*   Updated: 2023/06/20 20:13:38 by dong-kim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,35 @@ int main()
 {
     clock_t start_time, end_time;
     double time_taken;
-    start_time = clock();  // Capture the starting time
+    // start_time = clock();  // Capture the starting time
     // Your code or program execution
-    char c = 'Z';
-    printf("%c\n", c);
-    // int byte[8];
-    // int i = 7;
-    // while (i >= 0)
-    // {
-    //     byte[i] = (c >> i) & 1;
-    //     printf("%d\n", byte[i]);
-    //     i--;
-    // }
-    // while (i < 8)
-    // {
-    //     int res;
-    //     res += byte[i];
-    //     i++;
-    // }
-    end_time = clock();  // Capture the ending time
-    time_taken = (double)(end_time - start_time) / CLOCKS_PER_SEC;  // Calculate the time taken in seconds
-    printf("Time taken: %f seconds\n", time_taken);
+
+    for (int i = 0; i < 100; i++) {
+        start_time = clock();
+        char c = 'Z';
+        printf("%c\n", c);
+        end_time = clock();
+        time_taken = (double)(end_time - start_time) / CLOCKS_PER_SEC;  // Calculate the time taken in seconds
+        printf("Time taken: %f seconds\n", time_taken);
+
+        start_time = clock();
+        int byte[8];
+        int i = 7;
+        while (i >= 0)
+        {
+            byte[i] = (c >> i) & 1;
+            printf("%d\n", byte[i]);
+            i--;
+        }
+        int res = 0;
+        while (i < 8)
+        {
+            res += byte[i];
+            i++;
+        }
+        end_time = clock();  // Capture the ending time
+        time_taken = (double)(end_time - start_time) / CLOCKS_PER_SEC;  // Calculate the time taken in seconds
+        printf("Time taken: %f seconds\n", time_taken);
+    }
     return (0);
 }
