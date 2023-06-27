@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-27T07:00:38.832Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="kE41vxZ7sZw9i9O72psu" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-27T09:00:49.845Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="0ja8mrbnqP0cz_oRnahg" version="21.5.1" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="965" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2221" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -146,6 +146,21 @@
         </mxCell>
         <mxCell id="fSqQDzRsPBZKtno-7gHz-59" value="- Makefile&lt;br&gt;- working flow&lt;br&gt;- graph algorithm (dfs / bfs)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;fontColor=#143642;" parent="fSqQDzRsPBZKtno-7gHz-58" vertex="1">
           <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yWvKDvdb5LOOrVYkF1Tu-8" value="1. Is the map surrounded by wall?" style="swimlane;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="370" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yWvKDvdb5LOOrVYkF1Tu-11" value="while + index ([row][col])" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="yWvKDvdb5LOOrVYkF1Tu-8">
+          <mxGeometry x="10" y="32.5" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yWvKDvdb5LOOrVYkF1Tu-12" value="2. Is it possible to collect ALL collectibles and jump into exit?" style="swimlane;whiteSpace=wrap;html=1;startSize=45;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="465" width="200" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="yWvKDvdb5LOOrVYkF1Tu-13" value="dfs -&amp;gt; are all items collected when traversing the map?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="yWvKDvdb5LOOrVYkF1Tu-12">
+          <mxGeometry x="10" y="55" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yWvKDvdb5LOOrVYkF1Tu-14" value="bfs -&amp;gt; is it possbile to traverse and collect all the items without entering EXIT" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="yWvKDvdb5LOOrVYkF1Tu-12">
+          <mxGeometry x="10" y="95" width="180" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
